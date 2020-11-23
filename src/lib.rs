@@ -10,10 +10,10 @@ use r1cs::{Constraint, Element, Expression, Field, Gadget, Wire};
 use ff::PrimeField;
 
 pub struct WrappedCircuit<F: Field, E: Engine> {
-    gadget: Gadget<F>,
-    witness_map: BTreeMap<u32,E::Fr>,
-    public_inputs: Vec<Wire>,
-    convert_field: fn(&Element<F>) -> E::Fr,
+    pub gadget: Gadget<F>,
+    pub witness_map: BTreeMap<u32,E::Fr>,
+    pub public_inputs: Vec<Wire>,
+    pub convert_field: fn(&Element<F>) -> E::Fr,
 }
 
 impl<F: Field, E: Engine> Circuit<E::Fr> for WrappedCircuit<F, E> {
