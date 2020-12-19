@@ -13,10 +13,10 @@ maintenance = { status = "actively-developed" }
 edition = "2018"
 
 [dependencies]
-bellman = "0.8.1"
-pairing = { version = "0.18" }
+bellman = {package = "bellman_ce", version = "0.3.5", git="https://github.com/matter-labs/bellman.git"}
+pairing = {package = "pairing_ce", version = "0.21.*" }
 bls12_381 = "0.3.1"
 r1cs = "0.4.7"
 num = "0.2.0"
-rand = "0.7.3"
+rand = "0.4.6"
 ff = "0.8"
